@@ -1,0 +1,190 @@
+{
+    "[brackets-TAB]": {
+        "prefix": "[",
+        "body": "[\n\t$0\n"
+    },
+    "bind": {
+        "prefix": "b",
+        "body": "bind ${1:key} [ $0 ]"
+    },
+    "case": {
+        "prefix": "c",
+        "body": "case ${1:$int} ${2:0} [\n\t$0\n]"
+    },
+    "casef": {
+        "prefix": "cf",
+        "body": "casef ${1:$float} ${2:0.0} [\n\t$0\n]"
+    },
+    "cases": {
+        "prefix": "cs",
+        "body": "cases ${1:$str} \"$2\" [\n\t$0\n]"
+    },
+    "cleargui": {
+        "prefix": "cgui",
+        "body": "cleargui ${1:$count}$0"
+    },
+    "clearsleep": {
+        "prefix": "csl",
+        "body": "clearsleep"
+    },
+    "cond": {
+        "prefix": "co",
+        "body": "cond ${1:$cond} [\n\t$0\n]"
+    },
+    "editbind": {
+        "prefix": "eb",
+        "body": "editbind ${1:key} [ $0 ]"
+    },
+    "guialign": {
+        "prefix": "ga",
+        "body": "guialign ${1:$align} [$0]"
+    },
+    "guibar": {
+        "prefix": "gbar",
+        "body": "guibar"
+    },
+    "guibitfield": {
+        "prefix": "gbit",
+        "body": "guibitfield ${1:$name} ${2:var} ${3:$mask} [$0]"
+    },
+    "guibutton": {
+        "prefix": "gb",
+        "body": "guibutton ${1:$name} ${2:$action} ${3:$icon}$0"
+    },
+    "guicheckbox": {
+        "prefix": "gc",
+        "body": "guicheckbox ${1:$name} ${2:var} ${3:$onvalue} ${4:$offvalue} [$0]"
+    },
+    "guicolor": {
+        "prefix": "gcol",
+        "body": "guicolor ${1:$color}$0"
+    },
+    "guieditor": {
+        "prefix": "ge",
+        "body": "guieditor ${1:$name} ${2:$maxlength} ${3:$height} ${4:$mode}$0"
+    },
+    "guifield": {
+        "prefix": "gf",
+        "body": "guifield ${1:var} ${2:$maxlength} [$0]"
+    },
+    "guiimage": {
+        "prefix": "gimg",
+        "body": "guiimage ${1:$path} ${2:$action} ${3:$scale} ${4:$overlaid} ${5:$alttext}$0"
+    },
+    "guikeyfield": {
+        "prefix": "gkf",
+        "body": "guikeyfield ${1:var} ${2:$maxlength} [$0]"
+    },
+    "guilist": {
+        "prefix": "gl",
+        "body": "guilist [$0]"
+    },
+    "guilistslider": {
+        "prefix": "gls",
+        "body": "guilistslider ${1:var} ${2:$list} [$0]"
+    },
+    "guinameslider": {
+        "prefix": "gns",
+        "body": "guinameslider ${1:var} ${2:$names} ${3:$list} [$0]"
+    },
+    "guinoautotab": {
+        "prefix": "gnat",
+        "body": "guinoautotab [$0]"
+    },
+    "guionclear": {
+        "prefix": "goc",
+        "body": "guionclear [$0]"
+    },
+    "guiradio": {
+        "prefix": "gr",
+        "body": "guiradio ${1:$name} ${2:var} ${3:$val} [$0]"
+    },
+    "guiservers": {
+        "prefix": "gserv",
+        "body": "guiservers"
+    },
+    "guislider": {
+        "prefix": "gs",
+        "body": "guislider ${1:var} ${2:$min} ${3:$max} [$0]"
+    },
+    "guistayopen": {
+        "prefix": "gso",
+        "body": "guistayopen [$0]"
+    },
+    "guistrut": {
+        "prefix": "gst",
+        "body": "guistrut ${1:$count} ${2:$alttext}$0"
+    },
+    "guitab": {
+        "prefix": "gt",
+        "body": "guitab ${1:$name}$0"
+    },
+    "guitext": {
+        "prefix": "gte",
+        "body": "guitext ${1:$name} ${2:$icon}$0"
+    },
+    "guitextbox": {
+        "prefix": "gteb",
+        "body": "guitextbox ${1:$text} ${2:$width} ${3:$height} ${4:$color}$0"
+    },
+    "guititle": {
+        "prefix": "gti",
+        "body": "guititle ${1:$title}$0"
+    },
+    "if": {
+        "prefix": "if",
+        "body": "if ($1) [\n\t$2\n]${3: [\n\t$0\n]}"
+    },
+    "listfind": {
+        "prefix": "lfi",
+        "body": "listfind ${1:i} ${2:$list} [\n\t$0\n]"
+    },
+    "loop": {
+        "prefix": "l",
+        "body": "loop ${1:i} ${2:$num} [\n\t$0\n]"
+    },
+    "loopclients": {
+        "prefix": "lc",
+        "body": "looplist ${1:i} (listclients${2: 1}) [\n\t$0\n]"
+    },
+    "loopfiles": {
+        "prefix": "lf",
+        "body": "loopfiles ${1:i} ${2:$dir} ${3:$ext} [\n\t$0\n]"
+    },
+    "looplist": {
+        "prefix": "ll",
+        "body": "looplist ${1:i} ${2:$list} [\n\t$0\n]"
+    },
+    "loopstr": {
+        "prefix": "ls",
+        "body": "loop ${1:i} (strlen ${2:$str}) [\n\t$1 = (substr $2 $$1 1)\n\t$0\n]"
+    },
+    "loopwhile": {
+        "prefix": "lw",
+        "body": "loopwhile ${1:i} ${2:$num} [ $3 ] [\n\t$0\n]"
+    },
+    "method": {
+        "prefix": "m",
+        "body": "${1:name} = [\n\t$0\n]"
+    },
+    "newgui": {
+        "prefix": "gui",
+        "body": "newgui ${1:name} [\n\t$0\n] \"${2:$1}\""
+    },
+    "result": {
+        "prefix": "re",
+        "body": "result "
+    },
+    "sleep": {
+        "prefix": "sl",
+        "body": "sleep $1 [\n\t$0\n]"
+    },
+    "specbind": {
+        "prefix": "sb",
+        "body": "specbind ${1:key} [ $0 ]"
+    },
+    "while": {
+        "prefix": "w",
+        "body": "while [ $1 ] [\n\t$0\n]"
+    }
+}

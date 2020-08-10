@@ -1,0 +1,47 @@
+{
+    "name": "cubescript-vscode",
+    "displayName": "Cubescript Syntax Highlighter",
+    "description": "Syntax highlighting for Cubescript",
+    "version": "1.0.0",
+    "publisher": "acerspyro",
+    "engines": {
+        "vscode": "^1.13.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "cubescript",
+                "aliases": [
+                    "Cubescript",
+                    "cubescript"
+                ],
+                "extensions": [
+                    ".cfg",
+                    ".cube"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cubescript",
+                "scopeName": "source.cubescript",
+                "path": "./syntaxes/cubescript.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "cubescript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/peacefixation/vscode-cubescript.git"
+    }
+}
